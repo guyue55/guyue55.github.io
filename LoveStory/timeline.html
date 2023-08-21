@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Our Trip</title>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<style>html, body {height:100%;padding: 0px;    margin: 0px;    }   </style>
+<script type="text/javascript" src="build/js/jquery.min.js"></script>
+</head>
+<body>
+  <div id="timeline-embed"></div>
+  <script type="text/javascript" src="build/js/storyjs-embed.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $.get("/LoveStory/data/story.json", function(data, status) {
+        if (status == "success") {
+          var start = new Date();
+          start.setFullYear(2011,9,1);
+          var end = new Date();
+          end.setFullYear(2020,8,5);
+          var month = (end.getFullYear() - start.getFullYear()) * 12 +
+              (end.getMonth() - start.getMonth());
+          var day = Math.floor((end.getTime() - start.getTime()) / (24 * 60 * 60 * 1000));
+          var hour = Math.floor((end.getTime() - start.getTime()) / (60 * 60 * 1000));
+          data.timeline.text = "2011.10.1-" +
+              end.getFullYear() + "." + (end.getMonth() + 1) + "." + end.getDate() +
+              "</br>" + month + "个月</br>" + day + "个日夜</br>" + hour +
+              "个小时<br>我们一起走过！";
+          createStoryJS({
+            width:  "100%",
+            height: "100%",
+            source: data,
+            lang:   "zh-cn",
+            debug:true
+          });
+        }
+      })
+    })
+  </script>
+  </body>
+</html>
