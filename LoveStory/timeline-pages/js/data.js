@@ -2,7 +2,7 @@ var together = [
   {
     title: "初识",
     date: "2019/10/08",
-    img: "",
+    img: "https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png",
     content:
       "想想仿佛是昨天，中午加的微信，晚上开启了傻宝和半宅的尬聊之旅~~~"
   },
