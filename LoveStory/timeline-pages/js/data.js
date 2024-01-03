@@ -55,7 +55,7 @@ var together = [
     content:
       "宝贝的生日和七夕完美衔接，Perfect，和宝在一起的日子里一块体验和尝试了许多，有游乐场、演唱会、音乐会等等，有开心有恼怒也有嬉笑打闹，留下许多回忆，未来很长，还有许许多多的第一次等着咱们体验和记录，所以，宝，往后余生也请多多指教哟~~~"
   },{
-    title: "<a href=\"page/lingzheng.html\">领证纪念日</a>",
+    title: "领证纪念日(<a href=\"page/lingzheng.html\">Go</a>)",
     date: "2023/12/05",
     img: "",
     content:
