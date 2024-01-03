@@ -8,7 +8,7 @@ console.log("controller");
 var cardGenerator = function(dataArr) {
   var oBody = document.getElementById("body");
   var htmlStr = [
-    '<h1 class="title">Love Story<span style="font-size: smaller;" href="/LoveStory/Baby">  小情书~~</span></h1>',
+    '<h1 class="title">Love Story  <a style="font-size: x-small; color:#939393; text-decoration:none;" href="/LoveStory/Baby">小情书~~</a></h1>',
     '<div id="elapseClock"></div>',
     '<div class="time"></div>'
   ];
